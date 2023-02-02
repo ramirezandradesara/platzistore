@@ -4,7 +4,7 @@ module.exports = {
   env: {
     customKey: 'customValue',
   },
-  basePath: '/dist',
+  // basePath: '/dist',
   compress: true,
   async redirects() {
     return [
@@ -12,7 +12,7 @@ module.exports = {
         source: '/hola',
         destination: 'https://gndx.dev',
         permanent: true,
-      }
-    ]
-  }
-}
+      },
+    ];
+  },
+};
