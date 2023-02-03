@@ -37,5 +37,8 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "images": {
+    "domains": ["placeimg.com"],
+  }
 }
