@@ -20,25 +20,39 @@
     "incremental": true,
     "baseUrl": "src",
     "paths": {
-      "@pages/*": ["pages/*"],
-      "@components/*": ["components/*"],
-      "@containers/*": ["containers/*"],
-      "@icons/*": ["assets/icons/*"],
-      "@logos/*": ["assets/logos/*"],
-      "@context/*": ["context/*"],
-      "@styles/*": ["styles/*"],
-      "@hooks/*": ["hooks/*"]
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@containers/*": [
+        "containers/*"
+      ],
+      "@icons/*": [
+        "assets/icons/*"
+      ],
+      "@logos/*": [
+        "assets/logos/*"
+      ],
+      "@context/*": [
+        "context/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/pages/checkout.tsx"
   ],
   "exclude": [
     "node_modules"
   ],
-  "images": {
-    "domains": ["placeimg.com"],
-  }
 }

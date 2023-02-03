@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import OrderItem from '@components/OrderItem';
 import AppContext from '../context/AppContext';
 // import '@styles/MyOrder.scss';
+import Link from 'next/link';
 import arrow from '@icons/flechita.svg';
 
 const MyOrder = () => {
@@ -32,7 +33,9 @@ const MyOrder = () => {
             </p>
             <p>${sumTotal()}</p>
           </div>
-          <button className="primary-button">Checkout</button>
+          <Link href="/checkout" className="primary-button">
+            Checkout
+          </Link>
         </div>
       </div>
     </aside>
