@@ -1,20 +1,27 @@
-// import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+import Header from '@components/Header';
+import Script from 'next/script';
 import AppContext from '@context/AppContext';
 import useInitialState from '@hooks/useInitialState';
-import Header from '@components/Header';
-import Head from 'next/head';
+import '../styles/globals.css';
+import { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   const initialState = useInitialState();
-
   return (
     <AppContext.Provider value={initialState}>
-      <Head>
-        <title>My new cool app</title>
-      </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZN80WG7H93" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZN80WG7H93');
+      `}
+      </Script>
       <Header />
       <Component {...pageProps} />
     </AppContext.Provider>
   );
 }
+
+export default MyApp;

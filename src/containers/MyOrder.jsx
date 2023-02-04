@@ -4,6 +4,7 @@ import AppContext from '../context/AppContext';
 // import '@styles/MyOrder.scss';
 import Link from 'next/link';
 import arrow from '@icons/flechita.svg';
+import Image from 'next/image';
 
 const MyOrder = () => {
   const { state, toggleOrder } = useContext(AppContext);
@@ -18,7 +19,7 @@ const MyOrder = () => {
     <aside className="MyOrder">
       <div className="MyOrder-container">
         <div className="title-container">
-          <img className="more-clickable-area pointer" src={arrow} alt="arrow" onClick={() => toggleOrder()} />
+          <Image className="more-clickable-area pointer" src={arrow} alt="arrow" onClick={() => toggleOrder()} />
           <p className="title">My order</p>
         </div>
         <div className="my-order-content">

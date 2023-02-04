@@ -4,7 +4,7 @@ import AppContext from '../context/AppContext';
 import addToCartimg from '@icons/bt_add_to_cart.svg';
 import addedToCartimg from '@icons/bt_added_to_cart.svg';
 import styles from '@styles/ProductItem.module.scss';
-import Image from 'next/Image';
+import Image from 'next/image';
 
 const ProductItem = ({ product }) => {
   const { state, addToCart } = useContext(AppContext);
