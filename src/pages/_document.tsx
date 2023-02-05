@@ -6,6 +6,7 @@ export default function Document() {
       <body>
         <Head>
           <meta charSet="utf-8" />
+          <link rel='manifest' href='/manifest.json' />
         </Head>
         <Main />
         <NextScript />

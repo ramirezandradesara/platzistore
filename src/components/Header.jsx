@@ -44,13 +44,13 @@ const Header = () => {
         </div>
         <div className={styles['navbar-right']}>
           <ul>
-            <li className={`${styles['more-clickable-area']} ${styles['navbar-email']} ${styles.pointer}`} onClick={() => toggleMenu()}>
+            <button className={`${styles['more-clickable-area']} ${styles['navbar-email']} ${styles.pointer}`} onClick={() => toggleMenu()}>
               platzi@example.com
-            </li>
-            <li className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()}>
+            </button>
+            <button className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()}>
               <Image className={styles['more-clickable-area pointer']} src={shoppingCart} alt="shopping cart" />
               {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
-            </li>
+            </button>
           </ul>
         </div>
         {state.menuIsOpen && <Menu />}
